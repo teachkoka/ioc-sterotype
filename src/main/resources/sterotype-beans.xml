@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+ 
+ <context:annotation-config/>
+ 
+ <context:component-scan base-package="com.bellinfo.sterotype"/>
+ 
+ 
+ <bean id="pi" class="com.bellinfo.sterotype.PilotInfo">
+   <property name="qualification" value="pilotschool"></property>
+ </bean>
+ 
+ <bean id="s1" class="com.bellinfo.sterotype.SingletonTest" factory-method="getInstance">
+ 	<property name="name" value="Siva"></property>
+ </bean>
+ 
+  <bean id="s2" class="com.bellinfo.sterotype.SingletonTest" factory-method="getInstance" >
+    <property name="name" value="Koka"></property>
+ </bean>
+ 
+ 
+ 
+ 
+ 
+ </beans>
+ 
+ 
+ 
